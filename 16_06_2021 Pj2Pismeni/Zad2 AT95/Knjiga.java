@@ -31,16 +31,16 @@ public class Knjiga{
 	
 	@Override
 	public boolean equals(Object object){
-		if(this == object){
-			return true;
+		if(this == object){																					//	Provjeri jesu li this i object reference na isti objekat
+			return true;																					//	te ako jesu..
 		}
 		
-		if(object == null || this.getClass() != object.getClass()){
+		if(object == null || this.getClass() != object.getClass()){											//	Ako nisu, provjeri je li mozda object referenca na null ili da mozda object ne referncira instancu neke druge klase?
 			return false;
 		}
 		
-		Knjiga knjiga = (Knjiga)object;
-		return (this.naslov.equals(knjiga.naslov)) && (this.godinaIzdavanja == knjiga.godinaIzdavanja);
+		Knjiga knjiga = (Knjiga)object;																		//	(Eksplicitna konverzija)
+		return (this.naslov.equals(knjiga.naslov)) && (this.godinaIzdavanja == knjiga.godinaIzdavanja);		//	poredjenje..
 	}
 	
 	@Override
